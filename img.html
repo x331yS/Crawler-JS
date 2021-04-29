@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Amazon img</title>
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+    * {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        text-align: center;
+        background: #000;
+        padding: 20%;
+    }
+
+    h2 {
+        color: #fff;
+        padding: 10px;
+    }
+</style>
+
+<body>
+<head>
+</head>
+<h2>Amazon research ? <input id="str"/></h2>
+<button onclick="submit(event)">Submit</button>
+<h2>Example of what do you got</h2>
+<img src="screen.jpg">
+<a href="/screen.jpg"><h2>Screen shot link</h2></a>
+<script>
+    function submit(event) {
+        event.preventDefault()
+        const elem = document.getElementById('str')
+        console.log(elem.value)
+        fetch("/img?search=" + elem.value, {method:"POST"})
+        .then(() => location.reload())
+    }
+</script>
+
+</body>
+</html>
