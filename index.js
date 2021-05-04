@@ -1,26 +1,29 @@
 const express = require("express");
 const app = express();
-const screenshot = 'screen.jpg'
 const {amazon} = require('./amazon')
+const {google} = require('./google')
+const {hacker} = require('./hackerNews')
+const {games} = require('./games')
 const path = require("path")
 
 app.get("/", function (req, res) {
-    res.sendFile(path.resolve("./index.html"))
+    hacker()
+    games()
+    res.sendFile(path.resolve("static","index.html"))
 });
+
+app.post("/amazon", async function (req, res) {
+    await amazon(req.query.search)
+    res.redirect("/amazon")
+});
+
+app.post("/google", async function (req, res) {
+    await google(req.query.search)
+    res.redirect("/google")
+});
+
+app.use("/",express.static(path.resolve("static")))
 
 app.listen(6969, function () {
+    console.log("http://localhost:6969")
 });
-
-app.get("/img", function (req, res) {
-    res.sendFile(path.resolve("img.html"))
-})
-
-app.post("/img", async function (req, res) {
-    await amazon(req.query.search)
-    res.sendFile(path.resolve("img.html"))
-})
-
-app.get("/screen.jpg", function (req, res) {
-    res.sendFile(path.resolve(screenshot))
-})
-

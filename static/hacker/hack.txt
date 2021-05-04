@@ -1,0 +1,24 @@
+Mardi 4 Mai 2021
+
+Hacker News
+
+-uLisp
+-How Big Tech got so big: Hundreds of acquisitions
+-Chiptunes on an ATtiny4 and the 3 Cent Micro
+-An opinionated map of incremental and streaming systems
+-Is Your Son a Computer Hacker? (2001)
+-CGI with Awk on OpenBSD Httpd (2020)
+-Show HN: I reverse engineered the Bose iOS app and rebuilt it for Mac
+-MNT Reform 2 DIY Kit Review
+-Pandora says laboratory-made diamonds are forever
+-Belgian farmer accidentally moves French border
+-Efficiency Is the Enemy
+-Lugg (YC S15) Is Hiring Engineers (React, Rails, Remote)
+-John Swartzwelder, Sage of “The Simpsons”
+-Back in 1993, I was taking a number theory class
+-Google banned almost 120k spam developer accounts in 2020 for the play store
+-Tracking “Dark Ships” with New Satellite Technology
+-Casio AI-1000 Pocket Lisp Computer from 1989 [video]
+-The Evolution of Jamstack
+-Linux Terminal Tools [pdf]
+-First genetically modified mosquitoes released in the United States
