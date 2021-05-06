@@ -78,7 +78,7 @@ function hacker() {
             return anchors.map(anchor => anchor.textContent).slice(0, 20)
         })
 
-        await writeFileAsync(path.join('static/hacker/','hack.html'), "<style>* {color: #fff;}  .title {font-size: 100px;}</style>" + '</br>' + "<div class='title'>" + title + "</div>" + '</br></br>' + '-' + infos.join('</br>-'))
+        await writeFileAsync(path.join('static/hacker/','hack.html'), "<style>@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); * {background: #fff; color: #000; font-family: 'Poppins' , sans-serif;}  .title {font-size: 100px;}</style>" + '</br>' + "<div class='title'>" + title + "</div>" + '</br></br>' + '-' + infos.join('</br>-'))
         await writeFileAsync(path.join('static/hacker/','hack.txt'), jourSemaine+' '+jourMois+' '+mois+' '+annee+'\n\n'+title + '\n\n' + '-' + infos.join('\n-'))
 
 

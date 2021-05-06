@@ -4,7 +4,7 @@ const screenshot = 'static/screen.jpg'
 async function amazon(str) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage()
-    await page.setViewport({width: 1280, height: 800})
+    await page.setViewport({width: 2000, height: 1000})
     await page.goto('https://www.amazon.com/s?k=' + str)
     await delay(1000)
     await page.click('.a-button-input')

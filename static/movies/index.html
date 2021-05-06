@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Amazon</title>
+    <title>Stalk</title>
 
 </head>
 <style>
@@ -37,21 +37,18 @@
 <head>
 </head>
 <a href="/" style="text-decoration: #fd79a8"><h1 >Back to menu</h1></a>
-<h2>Amazon research ? <input id="str"/></h2>
+<h2>Movies research ? <input id="str"/></h2>
 <button onclick="submit(event)">Submit</button>
-<h2>Example of what do you got</h2>
-<img src="../screen.jpg">
-<a href="/screen.jpg"><h2>Screen shot link</h2></a>
+<h2>Example of what you get</h2>
+<img src="movie.jpg">
+<a href="movie.jpg"><h2>Screen shot link</h2></a>
 <script>
     function submit(event) {
         event.preventDefault()
         event.currentTarget.disabled=true
         const elem = document.getElementById('str')
         console.log(elem.value)
-        fetch("/amazon?search=" + elem.value, {method:"POST"})
-        .then(() => location.reload())
+        fetch("/movies?search=" + elem.value, {method:"POST"})
+            .then(() => location.reload())
     }
 </script>
-
-</body>
-</html>

@@ -1,24 +1,24 @@
-Mardi 4 Mai 2021
+Jeudi 6 Mai 2021
 
 Hacker News
 
--uLisp
--How Big Tech got so big: Hundreds of acquisitions
--Chiptunes on an ATtiny4 and the 3 Cent Micro
--An opinionated map of incremental and streaming systems
--Is Your Son a Computer Hacker? (2001)
--CGI with Awk on OpenBSD Httpd (2020)
--Show HN: I reverse engineered the Bose iOS app and rebuilt it for Mac
--MNT Reform 2 DIY Kit Review
--Pandora says laboratory-made diamonds are forever
--Belgian farmer accidentally moves French border
--Efficiency Is the Enemy
--Lugg (YC S15) Is Hiring Engineers (React, Rails, Remote)
--John Swartzwelder, Sage of “The Simpsons”
--Back in 1993, I was taking a number theory class
--Google banned almost 120k spam developer accounts in 2020 for the play store
--Tracking “Dark Ships” with New Satellite Technology
--Casio AI-1000 Pocket Lisp Computer from 1989 [video]
--The Evolution of Jamstack
--Linux Terminal Tools [pdf]
--First genetically modified mosquitoes released in the United States
+-Fungi on Mars? Evidence of Growth and Behavior from Sequential Images [pdf]
+-Hatetris – Tetris which always gives you the worst piece
+-A centrifugal spin on a 500-year-old air compressor design
+-1988: P.R.E.S.T.A.V.B.A.
+-Crazy New Ideas
+-IBM Creates First 2nm Chip
+-Why I Work on Ads
+-Interactive IPA Chart
+-MedCrypt (YC W19) Is Hiring: AWS Cloud/DevOps Engineer – Remote
+-I Hacked Google App Engine: Anatomy of a Java Bytecode Exploit
+-The Rustonomicon
+-Branch predictor: How many “if”s are too many?
+-Researchers chart path to drastically lower administrative costs of health care
+-Starting a Crypto Project
+-Quantum Double-Slit Experiment Offers Hope for Earth-Size Telescope
+-DIY Boat Monitoring System
+-MindCuber for Lego Mindstorms EV3
+-Opposition to Net Neutrality Was Faked, New York Says
+-Persuading the Body to Regenerate Its Limbs
+-ARM vs. RISC-V Vector Extensions
