@@ -50,5 +50,16 @@
         console.log(elem.value)
         fetch("/movies?search=" + elem.value, {method:"POST"})
             .then(() => location.reload())
+            .then(() => stateChange())
+            .then(() => location.reload())
     }
+    function stateChange(newState) {
+        setTimeout('', 25000);
+
+        if(newState === -1) {
+            alert('PROBLEM');
+        }
+    }
+
+
 </script>

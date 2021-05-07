@@ -24,14 +24,17 @@ async function imdb(str) {
     const time = await page.evaluate(() => {
         return document.querySelector("div[class='subtext'] > time").innerText;
     })
-    // let pls = page.document.querySelector("div[id='titleAwardsRanks']") !== null;
-    // if (pls) {
+
     let top = await page.evaluate(() => {
-        return document.querySelector("div[id='titleAwardsRanks']").innerText;
+        let pls = document.querySelector("div[id='titleAwardsRanks']") !== null;
+        if (pls) {
+            return document.querySelector("div[id='titleAwardsRanks']").innerText;
+        } else {
+            top = "No top ranking"
+        }
     })
-    // }else {
-    //     top = "No top ranking"
-    // }
+
+
     const ratingNumber = await page.evaluate(() => {
         return document.querySelector('span[itemprop="ratingCount"]').innerText;
     })
