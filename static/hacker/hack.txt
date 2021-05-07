@@ -1,24 +1,24 @@
-Jeudi 6 Mai 2021
+Vendredi 7 Mai 2021
 
 Hacker News
 
--Fungi on Mars? Evidence of Growth and Behavior from Sequential Images [pdf]
--Hatetris – Tetris which always gives you the worst piece
--A centrifugal spin on a 500-year-old air compressor design
--1988: P.R.E.S.T.A.V.B.A.
--Crazy New Ideas
--IBM Creates First 2nm Chip
--Why I Work on Ads
--Interactive IPA Chart
--MedCrypt (YC W19) Is Hiring: AWS Cloud/DevOps Engineer – Remote
--I Hacked Google App Engine: Anatomy of a Java Bytecode Exploit
--The Rustonomicon
--Branch predictor: How many “if”s are too many?
--Researchers chart path to drastically lower administrative costs of health care
--Starting a Crypto Project
--Quantum Double-Slit Experiment Offers Hope for Earth-Size Telescope
--DIY Boat Monitoring System
--MindCuber for Lego Mindstorms EV3
--Opposition to Net Neutrality Was Faked, New York Says
--Persuading the Body to Regenerate Its Limbs
--ARM vs. RISC-V Vector Extensions
+-Termite Is Obsoleted by Alacritty
+-Amazon Fake Reviews Scam Exposed in Data Breach
+-Searching the web for under $1000/month
+-Rufus: Reliable USB Formatting Utility
+-Bird song sonographs show distinct drawing patterns
+-"To our surprise"
+-WebAIM: Screen Reader User Survey #9
+-Decentralized trust graph for online value exchange without a blockchain (2017)
+-AtoB (YC S20) – Stripe for Transportation – hiring early engineers and operators
+-Illumos to drop SPARC Support
+-Analytics Suggest 96% of Users Leave App Tracking Disabled in iOS 14.5
+-Happy Hacking: Music Implementation in NieR:Automata (2017)
+-JavaScript for Shell Scripting
+-Directory of Open Access Journals
+-Why are there so many people in prison in America? (2017)
+-Anime2Sketch: A sketch extractor for illustration, anime art, manga
+-WinBox: Modern window manager for the web
+-Transactional memory similarity to garbage collection
+-Racket 8.1
+-Grain: WebAssembly-First Programming Language

@@ -9,7 +9,6 @@ async function google(str) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto("https://www.google.com")
-    await page.setViewport({width: 2000, height: 1000})
     await delay(1000)
     await page.click("#zV9nZe")
     await church(page, "instagram", str)
