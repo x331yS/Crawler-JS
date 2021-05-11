@@ -1,24 +1,24 @@
-Vendredi 7 Mai 2021
+Lundi 10 Mai 2021
 
 Hacker News
 
--Searching the web for under $1000/month
--Towards an HD44780-Based Video Mode
--U.S. adds just 266,000 jobs in April, far below expectations
--"To our surprise"
--Rufus: Reliable USB Formatting Utility
--Decentralized trust graph for online value exchange without a blockchain (2017)
--Amazon Fake Reviews Scam Exposed in Data Breach
--Generating more interesting image previews using imagemagick
--Termite Is Obsoleted by Alacritty
--Bird song sonographs show distinct drawing patterns
--The Opportunists
--Illumos to drop SPARC Support
--WebAIM Screen Reader User Survey #9
--AtoB (YC S20) – Stripe for Transportation – hiring early engineers and operators
--Analytics Suggest 96% of Users Leave App Tracking Disabled in iOS 14.5
--JavaScript for Shell Scripting
--Happy Hacking: Music Implementation in NieR:Automata (2017)
--Anime2Sketch: A sketch extractor for illustration, anime art, manga
--WinBox: Modern window manager for the web
--Tesla Engineer Says Musk Overstated Tesla Autopilot Reality
+-The one where writing books is not really a good idea
+-US Army Training for Advanced Situational Awareness (April, 2021) [pdf]
+-OpenPOWER Foundation announces LibreBMC, a POWER-based, fully open-source BMC
+-Epidemiologist R Handbook
+-Why are modern 50mm lenses so damned complicated?
+-Engineer Who Won the Nobel Prize Twice in Physics
+-Professor who harnessed power of cactuses is a top inventor
+-Why OpenDoc failed, and then failed 3 more times?
+-Arbitrary Code Execution in the Universal Turing Machine
+-Show HN: Django SQL Dashboard
+-Scrap for cash: Bronze Age witnessed revolution in small change across Europe
+-CVE-2021-32471 – Input validation in Marvin Minsky 1967 Turing Machine
+-Facebook Should Halt Instagram Kids Plan, Attorneys General Say
+-Show HN: DataProfiler – What's in your data? Extract schema, stats and entities
+-Signadot (YC W20) Is Hiring Founding Engineers
+-Advancing Sports Analytics Through AI Research
+-Poor Disk Performance
+-The FBI Seized Safe Deposit Boxes Knowing ‘Some’ Belonged to ‘Honest Citizens’
+-Teeing, a hidden gem in the Java API
+-The word “decide” has deadly origins
