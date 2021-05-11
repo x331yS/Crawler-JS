@@ -3,7 +3,7 @@ const app = express();
 const favicon = require('serve-favicon')
 const {amazon} = require('./amazon')
 const {google} = require('./google')
-const {imdb} = require('./movies')
+const {movies} = require('./movies')
 const {hacker} = require('./hackerNews')
 const {games} = require('./games')
 const path = require("path")
@@ -25,7 +25,7 @@ app.post("/google", async function (req, res) {
 });
 
 app.post("/movies", async function (req, res) {
-    await imdb(req.query.search)
+    await movies(req.query.search)
     res.redirect("/movies")
 });
 

@@ -6,7 +6,7 @@ const writeFileAsync = promisify(fs.writeFile);
 const {delay} = require('./amazon')
 const https = require("https");
 
-async function imdb(str) {
+async function movies(str) {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page.setViewport({width: 1900, height: 1000})
@@ -82,10 +82,10 @@ async function imdb(str) {
         await newBrowser.close()
     }
     console.log("metascore")
-    const price = await puppeteer.launch({headless:false});
+    const price = await puppeteer.launch();
     const pricepage = await price.newPage()
     await pricepage.goto(`https://www.amazon.com/s?k=${str}+film`)
-    await delay(12000)
+    await delay(5000)
     await pricepage.evaluate(() => {
         let pls = document.querySelector(".a-button-input") !== null;
         if (pls == null) {
@@ -214,82 +214,82 @@ async function imdb(str) {
         "</html>")
 }
 
-async function metaScore(str) {
-    const newBrowser = await puppeteer.launch()
-    const metascorepage = await newBrowser.newPage()
-    await delay(3000)
-    await metascorepage.goto(`https://www.metacritic.com/search/all/${str}/results`)
-    await delay(6000)
-    await metascorepage.click("#onetrust-accept-btn-handler")
-    await delay(4000)
-    const metaScore = await metascorepage.evaluate(() => {
-        return document.querySelector(".main_stats > span").innerText;
-    })
-    await metascorepage.click("h3 > a")
-    await metascorepage.waitForSelector('.distribution');
-    const nbCritique = await metascorepage.evaluate(() => {
-        return document.querySelector(".based_on").innerText;
-    })
-    await delay(2000)
-    const element = await metascorepage.$('#nav_to_metascore');
-    await element.screenshot({path: 'static/movies/metascoreditrib.png'})
-    console.log(metaScore)
-    console.log(nbCritique)
+// async function metaScore(str) {
+//     const newBrowser = await puppeteer.launch()
+//     const metascorepage = await newBrowser.newPage()
+//     await delay(3000)
+//     await metascorepage.goto(`https://www.metacritic.com/search/all/${str}/results`)
+//     await delay(6000)
+//     await metascorepage.click("#onetrust-accept-btn-handler")
+//     await delay(4000)
+//     const metaScore = await metascorepage.evaluate(() => {
+//         return document.querySelector(".main_stats > span").innerText;
+//     })
+//     await metascorepage.click("h3 > a")
+//     await metascorepage.waitForSelector('.distribution');
+//     const nbCritique = await metascorepage.evaluate(() => {
+//         return document.querySelector(".based_on").innerText;
+//     })
+//     await delay(2000)
+//     const element = await metascorepage.$('#nav_to_metascore');
+//     await element.screenshot({path: 'static/movies/metascoreditrib.png'})
+//     console.log(metaScore)
+//     console.log(nbCritique)
+//
+//     await newBrowser.close()
+// }
+//
+// async function price(str) {
+//     const price = await puppeteer.launch();
+//     const pricepage = await price.newPage()
+//     await pricepage.goto(`https://www.amazon.com/s?k=${str}+film`)
+//     await delay(4000)
+//     await pricepage.click('.a-button-input')
+//     const prix = await pricepage.evaluate(() => {
+//         return document.querySelector(".a-offscreen").innerText;
+//     })
+//     console.log(prix)
+//     await price.close();
+// }
+//
+// async function allocine(str) {
+//     const allo = await puppeteer.launch();
+//     const allopage = await allo.newPage()
+//     await allopage.goto(`https://www.allocine.fr/rechercher/?q=${str}`)
+//     await delay(1000)
+//     await allopage.click('.jad_cmp_paywall_button-cookies')
+//     const date = await allopage.evaluate(() => {
+//         return document.querySelector(".date").innerText;
+//     })
+//     const director = await allopage.evaluate(() => {
+//         return document.querySelector(".meta-body-direction").innerText;
+//     })
+//     const actor = await allopage.evaluate(() => {
+//         return document.querySelector(".meta-body-actor").innerText;
+//     })
+//     await allopage.click('.meta-title-link')
+//     await allopage.waitForSelector(".content-txt")
+//     const synopsis = await allopage.evaluate(() => {
+//         return document.querySelector(".content-txt").innerText;
+//     })
+//     console.log(director)
+//     console.log(actor)
+//     console.log(synopsis)
+//     console.log(date)
+//     await allo.close()
+// }
+//
+// async function youtube(str) {
+//     const yobrowser = await puppeteer.launch();
+//     const youpage = await yobrowser.newPage()
+//     await youpage.goto(`https://www.youtube.com/results?search_query=${str}+trailer`)
+//     await delay(1000)
+//     await youpage.click("button >.VfPpkd-Jh9lGc")
+//     await delay(3000)
+//     await youpage.click(".yt-img-shadow")
+//     const youtubeUrl = await youpage.url();
+//     console.log(youtubeUrl);
+//     await yobrowser.close()
+// }
 
-    await newBrowser.close()
-}
-
-async function price(str) {
-    const price = await puppeteer.launch();
-    const pricepage = await price.newPage()
-    await pricepage.goto(`https://www.amazon.com/s?k=${str}+film`)
-    await delay(4000)
-    await pricepage.click('.a-button-input')
-    const prix = await pricepage.evaluate(() => {
-        return document.querySelector(".a-offscreen").innerText;
-    })
-    console.log(prix)
-    await price.close();
-}
-
-async function allocine(str) {
-    const allo = await puppeteer.launch();
-    const allopage = await allo.newPage()
-    await allopage.goto(`https://www.allocine.fr/rechercher/?q=${str}`)
-    await delay(1000)
-    await allopage.click('.jad_cmp_paywall_button-cookies')
-    const date = await allopage.evaluate(() => {
-        return document.querySelector(".date").innerText;
-    })
-    const director = await allopage.evaluate(() => {
-        return document.querySelector(".meta-body-direction").innerText;
-    })
-    const actor = await allopage.evaluate(() => {
-        return document.querySelector(".meta-body-actor").innerText;
-    })
-    await allopage.click('.meta-title-link')
-    await allopage.waitForSelector(".content-txt")
-    const synopsis = await allopage.evaluate(() => {
-        return document.querySelector(".content-txt").innerText;
-    })
-    console.log(director)
-    console.log(actor)
-    console.log(synopsis)
-    console.log(date)
-    await allo.close()
-}
-
-async function youtube(str) {
-    const yobrowser = await puppeteer.launch();
-    const youpage = await yobrowser.newPage()
-    await youpage.goto(`https://www.youtube.com/results?search_query=${str}+trailer`)
-    await delay(1000)
-    await youpage.click("button >.VfPpkd-Jh9lGc")
-    await delay(3000)
-    await youpage.click(".yt-img-shadow")
-    const youtubeUrl = await youpage.url();
-    console.log(youtubeUrl);
-    await yobrowser.close()
-}
-
-module.exports = {imdb}
+module.exports = {movies}
