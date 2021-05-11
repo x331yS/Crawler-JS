@@ -1,6 +1,5 @@
-/node_modules
-/.idea
-/js
+node_modules
+.idea
 static/*.jpg
 static/games/games.html
 static/google/facebook.html
