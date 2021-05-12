@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Google Search</title>
+
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+  * {
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    text-align: center;
+    background: #000;
+    padding: 4%;
+  }
+  h1 {
+    font-size: 20px;
+    color: #fff;
+    padding: 20px;
+  }
+  h1:hover {
+    color: red;
+  }
+
+  h2 {
+    color: #fff;
+    padding: 10px;
+  }
+</style>
+
+<body>
+<head>
+</head>
+<a href="/" style="text-decoration: #fd79a8"><h1 >Back to menu</h1></a>
+<h2>Google research ? <input id="str"/></h2>
+<button onclick="submit(event)">Submit</button>
+<h2>Data of google research</h2>
+<div id="list">
+  <p>
+    <iframe src="instagram.html" width=100% height=400 ></iframe>
+  </p>
+  <p>
+    <iframe src="facebook.html" width=100% height=400 ></iframe>
+  </p>
+  <p>
+    <iframe src="linkedin.html" width=100% height=400 ></iframe>
+  </p>
+  <p>
+    <iframe src="twitter.html" width=100% height=400 ></iframe>
+  </p>
+</div>
+<script>
+  function submit(event) {
+    event.preventDefault()
+    event.currentTarget.disabled=true
+    const elem = document.getElementById('str')
+    console.log(elem.value)
+    fetch("/google?search=" + elem.value, {method:"POST"})
+            .then(() => location.reload())
+  }
+</script>
+
+</body>
+</html>
