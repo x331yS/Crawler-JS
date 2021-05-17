@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/rocket.css"/>
+</head>
+
+<body>
+<div class="mainDiv">
+    <div class="title">SEARCH YOUR ITEM</div>
+    <div class="searchbarDiv">
+        <input id="str" class="SearchBar"/>
+        <div style="margin-top: 10px;">
+            <select name="pets" id="pet-select">
+                <option value="">No-Color</option>
+                <option style="background-color: black; color: black;" value="black">Black</option>
+                <option style="background-color: gray; color: gray;" value="grey">Grey</option>
+                <option style="background-color: white; color: white;" value="white">White</option>
+                <option style="background-color: pink; color: pink;" value="pink">Pink</option>
+                <option style="background-color: purple; color: purple;" value="purple">Purple</option>
+                <option style="background-color: red; color: red;" value="crimson">Red</option>
+                <option style="background-color: brown; color: brown;" value="sienna">Sienna</option>
+                <option style="background-color: orange; color: orange;" value="orange">Orange</option>
+                <option style="background-color: yellow; color: yellow;" value="saffron">Yellow</option>
+                <option style="background-color: lawngreen; color: lawngreen;" value="lime">Lime</option>
+                <option style="background-color: green; color: green;" value="fgreen">Forest Green</option>
+                <option style="background-color: blue; color: blue;" value="cobalt">Blue</option>
+                <option style="background-color: cyan; color: cyan;" value="sblue">Cyan</option>
+            </select>
+            <button class="button" onclick="submit(event)" style="cursor:pointer;">Find it</button>
+        </div>
+    </div>
+</div>
+<a href="/" style="text-decoration: none;text-align: center; padding: 20px; color: red"><h1>Back to menu</h1></a>
+
+<script>
+    function submit(event) {
+        event.preventDefault()
+        event.currentTarget.disabled = true
+        const color = document.getElementById('pet-select')
+        const elem = document.getElementById('str')
+        console.log(elem.value)
+        fetch("/result?item=" + elem.value + "/" + color.value, {method: "POST"});
+        setTimeout(function () {
+            window.location.href = "/result/";
+        }, 7000);
+    }
+</script>
+
+</body>
+
+</html>

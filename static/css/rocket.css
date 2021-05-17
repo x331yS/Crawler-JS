@@ -1,0 +1,141 @@
+@import url("../fonts/fonts.css");
+
+.SearchBar {
+    width: 300px;
+}
+
+.mainDiv {
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.103);
+}
+
+.secondDiv {
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 100px;
+    border-radius: 25px;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.103);
+}
+
+.flex-lines {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.imgDisplay {
+    width: 150px;
+    height: 150px;
+    margin-left: 125px;
+}
+
+.loading {
+    cursor: wait;
+}
+
+.card {
+    margin-top: 10px;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.graphDisplay {
+    text-align: center;
+    width: 70%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.title {
+    font-family: Apache;
+    font-size: 300%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.price {
+    font-family: Apache;
+    font-size: 120%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.searchbarDiv {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.searchbar {
+    height: 20px;
+    width: 350px;
+}
+
+.button {
+    background-color: #ffffff; /* Green */
+    border: none;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+  }
+
+html, body {
+    width: 100%;
+    height:100%;
+  }
+  
+  
+  body {
+      overflow: hidden;
+      background: linear-gradient(-45deg,
+    #000000,
+    #080d5a,
+    #595eaa,
+    #000000
+      );
+      background-size: 300% 300%;
+      animation: gradient 5s ease infinite;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+  ::selection {
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+  }
+

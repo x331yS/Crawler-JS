@@ -6,6 +6,7 @@ const {google} = require('./google')
 const {movies} = require('./movies')
 const {hacker} = require('./hackerNews')
 const {games} = require('./games')
+const {crawl} = require('./rocket')
 const path = require("path")
 
 app.get("/", function (req, res) {
@@ -27,6 +28,11 @@ app.post("/google", async function (req, res) {
 app.post("/movies", async function (req, res) {
     await movies(req.query.search)
     res.redirect("/movies")
+});
+
+app.post("/result", function(req, res) {
+    let item_name = crawl(req.query.item)
+    res.send(item_name)
 });
 
 app.use("/",express.static(path.resolve("static")))
