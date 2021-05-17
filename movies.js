@@ -49,38 +49,35 @@ async function movies(str) {
     });
     await browser.close()
     console.log("imdb")
-    let metaScore = " No metaScore"
-    let nbCritique = " No critique"
-    if (str === "harry potter") {
-        const newBrowser = await puppeteer.launch()
-        const metascorepage = await newBrowser.newPage()
-        await delay(3000)
-        str = str.replace(" ", "%20")
-        await metascorepage.goto(`https://www.metacritic.com/search/all/${str}/results`)
-        await delay(6000)
-        await metascorepage.evaluate(() => {
-            let pls = document.querySelector("#onetrust-accept-btn-handler") !== null;
-            if (pls == null) {
-                delay(15000)
-            }
-        })
-        await metascorepage.waitForSelector("#onetrust-accept-btn-handler")
-        await metascorepage.click("#onetrust-accept-btn-handler")
-        await delay(4000)
-        const metaScore = await metascorepage.evaluate(() => {
-            return document.querySelector(".main_stats > span").innerText;
-        })
-        await metascorepage.click("h3 > a")// .product_title
-        await metascorepage.waitForSelector('.distribution');
-        let nbCritique = await metascorepage.evaluate(() => {
-            return document.querySelector(".based_on").innerText;
-        })
-        await delay(2000)
-        const element = await metascorepage.$('#nav_to_metascore');
-        await element.screenshot({path: 'static/movies/metascoreditrib.png'})
+    const newBrowser = await puppeteer.launch()
+    const metascorepage = await newBrowser.newPage()
+    await delay(3000)
+    str = str.replace(" ", "%20")
+    await metascorepage.goto(`https://www.metacritic.com/search/all/${str}/results`)
+    await delay(6000)
+    await metascorepage.evaluate(() => {
+        let pls = document.querySelector("#onetrust-accept-btn-handler") !== null;
+        if (pls == null) {
+            delay(15000)
+        }
+    })
+    await metascorepage.waitForSelector("#onetrust-accept-btn-handler")
+    await metascorepage.click("#onetrust-accept-btn-handler")
+    await delay(4000)
+    const metaScore = await metascorepage.evaluate(() => {
+        return document.querySelector(".main_stats > span").innerText;
+    })
+    await metascorepage.click("h3 > a")// .product_title
+    await metascorepage.waitForSelector('.distribution');
+    let nbCritique = await metascorepage.evaluate(() => {
+        return document.querySelector(".based_on").innerText;
+    })
+    await delay(2000)
+    const element = await metascorepage.$('#nav_to_metascore');
+    await element.screenshot({path: 'static/movies/metascoreditrib.png'})
 
-        await newBrowser.close()
-    }
+    await newBrowser.close()
+
     console.log("metascore")
     const price = await puppeteer.launch();
     const pricepage = await price.newPage()
@@ -180,33 +177,32 @@ async function movies(str) {
         "\n" +
         "<div>\n" +
         "    <h2>" + title + "</br>Time of the movie : " + time + "</h2>\n" +
-        "    </br>\n"+
+        "    </br>\n" +
         "    <h3>" + synopsis + "</h3>\n" +
-        "    </br>\n"+
-        "    <h3>This movie was released "+ date +"</h3>\n" +
+        "    </br>\n" +
+        "    <h3>This movie was released " + date + "</h3>\n" +
         "    <img src=\"movie.jpg\" height=\"800\" width=\"561\">\n" +
         "    <iframe width=\"1050\" height=\"800\" src='" + youtubehurle + "' frameborder=\"0\"\n" +
         "            allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"\n" +
         "            allowfullscreen></iframe>\n" +
         "    <a href=\"movie.jpg\">\n" +
         "        <h2>Screen shot link</h2></a>\n" +
-        "    <h3>Production : "+ director+"</h3>\n" +
-        "    <h3>Actor : "+ actor+"</h3>\n" +
-        "    </br>\n"+
-        "    <h3>Amazon price : "+ prix+"</h3>\n" +
-        "    </br>\n"+
-        "    <h2>Score</h2>\n"+
-        "    </br>\n"+
-        "    <h3>Reward : "+ top +" with "+ ratingNumber+"rating</h3>\n" +
-        "    </br>\n"+
-        "    <h3>Imdb Score on imdb.com : "+ ratingValue +"/10</h3>\n" +
-        "    </br>\n"+
-        "    <h3>MetaScore on metacritique.com : "+ metaScore +"/100 "+ nbCritique+"</h3>\n" +
-        "    </br>\n"+
+        "    <h3>Production : " + director + "</h3>\n" +
+        "    <h3>Actor : " + actor + "</h3>\n" +
+        "    </br>\n" +
+        "    <h3>Amazon price : " + prix + "</h3>\n" +
+        "    </br>\n" +
+        "    <h2>Score</h2>\n" +
+        "    </br>\n" +
+        "    <h3>Reward : " + top + " with " + ratingNumber + "rating</h3>\n" +
+        "    </br>\n" +
+        "    <h3>Imdb Score on imdb.com : " + ratingValue + "/10</h3>\n" +
+        "    </br>\n" +
+        "    <h3>MetaScore on metacritique.com : " + metaScore + "/100 " + nbCritique + "</h3>\n" +
+        "    </br>\n" +
         "    <h3>Critique exemple on metacritique.com :</h3>\n" +
-        "    </br>\n"+
+        "    </br>\n" +
         "    <img src=\"metascoreditrib.png\">\n" +
-
         "</div>\n" +
         "\n" +
         "\n" +
